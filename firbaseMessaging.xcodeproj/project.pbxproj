@@ -12,6 +12,8 @@
 		6E4865C32184750B0007995F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4865C12184750B0007995F /* Main.storyboard */; };
 		6E4865C52184750D0007995F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4865C42184750D0007995F /* Assets.xcassets */; };
 		6E4865C82184750D0007995F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4865C62184750D0007995F /* LaunchScreen.storyboard */; };
+		6EFA275821847DC600178200 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6EFA275721847DC600178200 /* GoogleService-Info.plist */; };
+		7B034C2075F931B8847D54D4 /* Pods_firbaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BD9971325E7F46DFEA9BD6 /* Pods_firbaseMessaging.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		6E4865C42184750D0007995F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E4865C72184750D0007995F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E4865C92184750D0007995F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EFA275621847D0E00178200 /* firbaseMessaging.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = firbaseMessaging.entitlements; sourceTree = "<group>"; };
+		6EFA275721847DC600178200 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		798D2E1202DDB731408F77FC /* Pods-firbaseMessaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firbaseMessaging.release.xcconfig"; path = "Pods/Target Support Files/Pods-firbaseMessaging/Pods-firbaseMessaging.release.xcconfig"; sourceTree = "<group>"; };
+		B1BD9971325E7F46DFEA9BD6 /* Pods_firbaseMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firbaseMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A38F670B355308608514AD /* Pods-firbaseMessaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firbaseMessaging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-firbaseMessaging/Pods-firbaseMessaging.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B034C2075F931B8847D54D4 /* Pods_firbaseMessaging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BFCFF067BC22353168051BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9A38F670B355308608514AD /* Pods-firbaseMessaging.debug.xcconfig */,
+				798D2E1202DDB731408F77FC /* Pods-firbaseMessaging.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6E4865B12184750B0007995F = {
 			isa = PBXGroup;
 			children = (
 				6E4865BC2184750B0007995F /* firbaseMessaging */,
 				6E4865BB2184750B0007995F /* Products */,
+				5BFCFF067BC22353168051BB /* Pods */,
+				D76A76E359DDA94F7E7C83D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,24 @@
 		6E4865BC2184750B0007995F /* firbaseMessaging */ = {
 			isa = PBXGroup;
 			children = (
+				6EFA275621847D0E00178200 /* firbaseMessaging.entitlements */,
 				6E4865BD2184750B0007995F /* AppDelegate.swift */,
 				6E4865BF2184750B0007995F /* ViewController.swift */,
 				6E4865C12184750B0007995F /* Main.storyboard */,
 				6E4865C42184750D0007995F /* Assets.xcassets */,
 				6E4865C62184750D0007995F /* LaunchScreen.storyboard */,
 				6E4865C92184750D0007995F /* Info.plist */,
+				6EFA275721847DC600178200 /* GoogleService-Info.plist */,
 			);
 			path = firbaseMessaging;
+			sourceTree = "<group>";
+		};
+		D76A76E359DDA94F7E7C83D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1BD9971325E7F46DFEA9BD6 /* Pods_firbaseMessaging.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E4865CC2184750D0007995F /* Build configuration list for PBXNativeTarget "firbaseMessaging" */;
 			buildPhases = (
+				3B1D3C637C4C198EFF5F2FCD /* [CP] Check Pods Manifest.lock */,
 				6E4865B62184750B0007995F /* Sources */,
 				6E4865B72184750B0007995F /* Frameworks */,
 				6E4865B82184750B0007995F /* Resources */,
+				DFC3100E4669158A7BCAD41A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +127,11 @@
 				TargetAttributes = {
 					6E4865B92184750B0007995F = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -124,11 +160,63 @@
 			files = (
 				6E4865C82184750D0007995F /* LaunchScreen.storyboard in Resources */,
 				6E4865C52184750D0007995F /* Assets.xcassets in Resources */,
+				6EFA275821847DC600178200 /* GoogleService-Info.plist in Resources */,
 				6E4865C32184750B0007995F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B1D3C637C4C198EFF5F2FCD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-firbaseMessaging-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC3100E4669158A7BCAD41A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-firbaseMessaging/Pods-firbaseMessaging-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-firbaseMessaging/Pods-firbaseMessaging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6E4865B62184750B0007995F /* Sources */ = {
@@ -280,11 +368,14 @@
 		};
 		6E4865CD2184750D0007995F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9A38F670B355308608514AD /* Pods-firbaseMessaging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = firbaseMessaging/firbaseMessaging.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JTU2J9MTQ;
 				INFOPLIST_FILE = firbaseMessaging/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +389,14 @@
 		};
 		6E4865CE2184750D0007995F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798D2E1202DDB731408F77FC /* Pods-firbaseMessaging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = firbaseMessaging/firbaseMessaging.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JTU2J9MTQ;
 				INFOPLIST_FILE = firbaseMessaging/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
